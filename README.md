@@ -24,11 +24,11 @@ The following AWS resources are deployed via the CDK stack:
 5. **Amazon SNS**: Sends email alerts for anomalies in running form.  
 
 ## Important Files 
-**final_proj_stack.py**: This is the file that spins up all of the aws resources which involve sns, s3, lambda, iot hub, and sagemaker. 
-**preprocess.py**: The lambda function code  that takes sensor data from the iot hub and formats the sensor data correctly and then sends it to the s3 bucket for data storage.
-**batch_processor.py**: lambda function that will take the sagemaker endpoint and will ingest data and process it through the sagemaker endpoint. Then, this lambda function will send an email notification to the user using aws sns.
-**train_model.py and sagemaker_lambda.py**: The lambda function that will set the parameters for the anomaly detection model and will work in tandem with the sagemaker_lambda.py file to create a sagemaker endpoint which is stored in the s3 bucket.
-**send_sensor_data.py**: This script is the script that is found on each android iot device. This script will run and will send gyroscope and accelerometer sensor data to aws iot core.
+- **final_proj_stack.py**: This is the file that spins up all of the aws resources which involve sns, s3, lambda, iot hub, and sagemaker. 
+- **preprocess.py**: The lambda function code  that takes sensor data from the iot hub and formats the sensor data correctly and then sends it to the s3 bucket for data storage.
+- **batch_processor.py**: lambda function that will take the sagemaker endpoint and will ingest data and process it through the sagemaker endpoint. Then, this lambda function will send an email notification to the user using aws sns.
+- **train_model.py and sagemaker_lambda.py**: The lambda function that will set the parameters for the anomaly detection model and will work in tandem with the sagemaker_lambda.py file to create a sagemaker endpoint which is stored in the s3 bucket.
+- **send_sensor_data.py**: This script is the script that is found on each android iot device. This script will run and will send gyroscope and accelerometer sensor data to aws iot core.
 
 ## Setup Instructions
 
