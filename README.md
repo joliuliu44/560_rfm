@@ -11,7 +11,22 @@ This project implements an IoT-based system to monitor running form using AWS se
 
 ## Directory Structure
 
-final_proj/ │ ├── app.py # Entry point for AWS CDK application. ├── cdk.json # AWS CDK configuration file. ├── final_proj/ │ ├── final_proj_stack.py # CDK stack script that spins up AWS resources. │ ├── lambda/ │ ├── preprocess.py # Formats IoT sensor data and stores it in S3. │ ├── train_model.py # Configures and trains the SageMaker model. │ ├── sagemaker_lambda.py # Creates a SageMaker endpoint. │ ├── batch_processor.py # Processes data through the endpoint and sends alerts. │ └── README.md # This file.
+final_proj/
+├── app.py                 # Entry point for AWS CDK application.
+├── cdk.json               # AWS CDK configuration file.
+├── final_proj/
+│   ├── final_proj_stack.py  # CDK stack script that spins up AWS resources.
+│
+├── lambda/
+│   ├── preprocess.py       # Formats IoT sensor data and stores it in S3.
+│   ├── train_model.py      # Configures and trains the SageMaker model.
+│   ├── sagemaker_lambda.py # Creates a SageMaker endpoint.
+│   ├── batch_processor.py  # Processes data through the endpoint and sends alerts.
+|
+├── send_sensor_data.py   # Python script located on each iot device and should be running when user is engaged in running activity
+│
+└── README.md              # This file.
+
 
 
 ## AWS Resources
